@@ -1,0 +1,282 @@
+/* 1. Estilos gerais */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #e2e8f0;
+    background: linear-gradient(135deg, #0f172a 0%, #46494f 100%);
+    line-height: 1.6;
+}
+
+.conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a {
+    color: #285c83;
+}
+
+/* 2. Menu */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(5px); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.nome-site {
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.nome-site:hover{
+    color:#38bdf8;
+}
+nav a {
+    margin-left: 22px;
+    text-decoration: none;
+    font-size: 14px;
+    color:#b8bec5;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color:#ffffff;
+}
+
+/* 3. Apresentação e fotografia */
+.apresentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 90px 0 75px;
+}
+
+.etiqueta {
+    color: #ababab;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 10px 0 18px;
+}
+
+.apresentacao p {
+    max-width: 450px;
+}
+
+.fotografia {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e4eaf0;
+    transition: transform 0.3s ease;
+}
+.fotografia:hover {
+    transform: scale(1.05); 
+}
+
+.botao {
+    display: inline-block;
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao:hover {
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    color:  white;
+    transform: scale(1.05); 
+    
+}
+
+/* 4. Sobre mim e currículo */
+.secao {
+    border-top: 1px solid #e5eaf0;
+    padding: 50px 0;
+}
+
+.secao-galeria {
+    border-top: 0;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 0 0 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 32px;
+}
+
+h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.item-cv {
+    display: flex;
+    gap: 24px;
+    margin: 16px 0;
+    background-color: rgba(30, 41, 59, 0.6); 
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    padding: 22px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.item-cv:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8; 
+}
+
+.data {
+    min-width: 150px;
+    color: #bbbec2;
+    font-size: 14px;
+}
+
+.item-cv p {
+    margin: 4px 0;
+}
+
+.competencias {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.competencias li {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.competencias li:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+    transform: scale(1.05);
+}
+
+/* 5. Rodapé */
+footer {
+    padding: 40px 0 25px;
+    color: white;
+    background-color: #0f172a;
+}
+
+footer a {
+    color: #c6e4ff;
+}
+
+.nota {
+    margin-top: 45px;
+    font-size: 13px;
+    color: #c1cbd6;
+}
+/* Estilos da Galeria */
+.grade-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.cartao-galeria {
+    background-color: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cartao-galeria:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.cartao-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.cartao-galeria p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 6. Adaptação a ecrãs pequenos */
+@media (max-width: 650px) {
+    .topo, .apresentacao, .item-cv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 0 18px 0 0;
+    }
+
+    .apresentacao {
+        padding: 50px 0;
+        gap: 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .fotografia {
+        order: -1;
+        width: 150px;
+        height: 150px;
+    }
+}
